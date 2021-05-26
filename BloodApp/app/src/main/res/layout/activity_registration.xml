@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,14 +11,16 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <TextView
             android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:textSize="30dp"
             android:textStyle="normal"
             android:padding="10dp"
-            android:text="Your Details will be Public to the Community, by using this app you also need to pledge to be a donor to help those who are in need"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"></TextView>
+            android:text="Your Details will be Public to the Community, by using this app you also need to pledge to be a donor to help those who are in need">
+        </TextView>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_marginTop="20dp"
@@ -111,5 +112,8 @@
             android:textSize="18sp"
             android:textStyle="bold"></Button>
 
+
     </LinearLayout>
+
+
 </ScrollView>

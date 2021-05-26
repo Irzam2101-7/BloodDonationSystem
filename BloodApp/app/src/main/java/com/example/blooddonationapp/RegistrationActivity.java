@@ -9,10 +9,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class RegistrationActivity extends AppCompatActivity {
-
     private EditText nameEt, cityEt, bloodGroupEt, passwordEt, mobileEt;
     private Button submitButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,11 +32,11 @@ public class RegistrationActivity extends AppCompatActivity {
                 mobile = mobileEt.getText().toString();
                 showMessage(name+"\n");
                 Toast.makeText(RegistrationActivity.this, name + " ", Toast.LENGTH_SHORT).show();
-
             }
         });
     }
     private  void  showMessage(String msg){
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
+
 }

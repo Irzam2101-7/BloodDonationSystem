@@ -4,9 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".Homepage">
 
 
+<LinearLayout
+    android:id="@+id/linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/toolbar"
+    android:gravity="center">
+    <TextView
+        android:id="@+id/pick_location"
+        android:padding="5dp"
+        android:layout_margin="8dp"
+        android:textSize="20sp"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:drawableTint="@android:color/black"
+        android:drawableEnd="@drawable/ic_baseline_location_on_24dp"
+        android:textStyle="italic"
+        android:text="Choose Your Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_baseline_location_on_24dp" />
+</LinearLayout>
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         app:title="@string/app_name"
@@ -15,18 +39,26 @@
         app:menu="@menu/search_menu"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_below="@+id/linearlayout"
+        android:layout_above="@+id/make_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+    </androidx.recyclerview.widget.RecyclerView>
     <TextView
-        android:padding="5dp"
-        android:layout_margin="8dp"
+        android:id="@+id/make_request"
+        android:text="Make Request"
         android:textSize="20sp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/toolbar"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
         android:background="@color/colorPrimary"
-        android:drawableEnd="@drawable/ic_search_white24"
-        android:text="Choose Location"
-        android:layout_width="wrap_content"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableRight="@drawable/ic_search_white24" />
+        android:gravity="center_horizontal" />
 
 </RelativeLayout>
